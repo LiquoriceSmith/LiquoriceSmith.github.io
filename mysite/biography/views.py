@@ -6,4 +6,4 @@ from django.http import HttpResponse
 
 def index(request):
     exemplar = MainPage.objects.all()
-    return render(request, 'biography/index.html', {'exemplar': exemplar})
+    return render(request, 'biography/Главная.html', {'exemplar': exemplar})
