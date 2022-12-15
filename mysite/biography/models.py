@@ -11,3 +11,16 @@ class MainPage(models.Model):
 
     def __str__(self):
         return self.picture_description
+
+    class Meta:
+        verbose_name = 'Изображение'
+        verbose_name_plural = 'Изображения'
+
+
+class Otzivy(models.Model):
+    name = models.CharField(max_length=250, verbose_name='Имя пользователя')
+    otziv = models.TextField(blank=True, verbose_name='Отзыв')
+    data = models.DateTimeField(auto_now=True, verbose_name='Дата отзыва')
+
+    def __str__(self):
+        return self.name
