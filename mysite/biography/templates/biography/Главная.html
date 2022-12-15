@@ -87,8 +87,13 @@
                     {% for item in otzyv%}
                     <div class="u-container-style u-layout-cell u-size-20 u-layout-cell-1">
                         <div class="u-container-layout u-valign-top u-container-layout-1">
-                            <img class="u-image u-image-circle u-image-1" src="media/photos/anonim.jpg" alt=""
+                            {% if item.avatar %}
+                            <img class="u-image u-image-circle u-image-1" src="{{item.avatar.url}}" alt=""
                                  data-image-width="2250" data-image-height="1500">
+                             {%else%}
+                             <img class="u-image u-image-circle u-image-1" src="media/photos/anonim.jpg" alt=""
+                                 data-image-width="2250" data-image-height="1500">
+                             {%endif%}
                             <h6 class="u-text u-text-default u-text-1">{{item.name}}</h6>
                             <blockquote class="u-text u-text-default u-text-2">{{item.otziv}}
                             </blockquote>

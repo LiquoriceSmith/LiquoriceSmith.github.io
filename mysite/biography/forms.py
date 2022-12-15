@@ -5,7 +5,7 @@ from .models import Otzivy
 class OtzivForm(forms.ModelForm):
     class Meta:
         model = Otzivy
-        fields = ['name', 'otziv']
+        fields = ['name', 'otziv', 'avatar']
         widgets = {
             'name': forms.TextInput(attrs={"class": "form-control"}),
             'otziv': forms.Textarea(attrs={'class': 'form-control', 'rows': 5}),

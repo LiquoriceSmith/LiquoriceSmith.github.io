@@ -28,12 +28,12 @@
     </div>
 </nav>
 
-<div class="card" >
+<div class="card">
     <div class="card-body">
-        <form action="" method="post">
+        <form action="" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             {{form.as_p }}
-            <button type="submit" class="btn-primary btn-block">Добавить отзыв</button>
+            <button type="submit" class="btn btn-dark">Добавить отзыв</button>
         </form>
     </div>
 </div>
